@@ -1,0 +1,283 @@
+* {
+    padding:0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: rgba(112,150,147,1);
+    color: #ffffff;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #6649b8;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.white-filter {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(4deg) brightness(110%) contrast(101%);
+}
+
+.button {
+    font-family: 'DM Sans', sans-serif;
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 15px;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.subtitle{
+    text-align: center;
+    font-size: 30px;
+}
+
+.text{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.button:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.link{
+    color: #CC0001;
+}
+
+.icon{
+    width: 23px;
+}
+
+.flex {
+    display: flex;
+}
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 100;
+}
+
+.line-lists{
+    width: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.line-img{
+    width: 20px;
+    margin-left: 1.5vw;
+    margin-right: 1.5vw;
+    transition-duration: 1s;
+}
+
+.line-img:hover{
+    width: 6vh;
+}
+
+.nav-ul{
+    align-items: center;
+}
+
+.nav-icon{
+    margin-right: 17px;
+}
+
+.introduction {
+    width: 100%;
+    height: 140vh;
+    padding-top: 10vh;
+    background-image: url("./fondo/space.png");
+    background-color: #0a0a0a;
+    background-repeat: no-repeat;
+}
+
+.home{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.name{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.intro-subtitle{
+    margin-left: 20px;
+    color: #CC0001;
+}
+
+
+.main-icon{
+    width: 56px;
+    height: 56px;
+    margin-left: 17px;
+}
+
+.section{
+    min-height: 100dvh;
+}
+
+.about-me{
+    min-height: 70vh;
+    background: linear-gradient(180deg, rgba(10,10,10,1) 30%, rgba(112,150,147,1) 100%);
+}
+
+.projects{
+    height: 100vh;
+    background-color: rgba(112,150,147,1);
+    background-image: url("./fondo/paisaje1.png");
+    background-repeat: no-repeat;
+    background-size: 300vh;
+}
+
+.project-buttons{
+    width: 100%;
+    justify-content: center;
+}
+
+.carrousel{
+    display: flex;
+}
+
+.carrousel-container{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container {
+    display: flex;
+    width: 80%;
+    max-width: 720px;
+    scroll-snap-type: x mandatory;
+    overflow-x: hidden;
+}
+
+.carrousel-img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.carrousel-arrow{
+    cursor: pointer;
+    width: 10px;
+}
+
+.carrousel-invisible{
+    display: none;
+    position: absolute;
+}
+
+.button-selected{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.skills{
+    background-image: url("./fondo/cohete.png");
+    background-repeat: no-repeat;
+    background-color: #0a0a0a;
+    background-position: bottom;
+}
+
+.skills-stack{
+    display: grid;
+    grid-template-columns:repeat(5, auto);
+    padding-left: 20%;
+    padding-right: 20%;
+    justify-content: space-around;
+}
+
+.padding-top{
+    padding-top: 100px;
+}
+
+.skill{
+    display: flex-col;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-text{
+    font-size: 13px
+}
+
+.contact-me{
+    background-image: url("./fondo/paisaje.png");
+    background-repeat: no-repeat;
+    background-color: #f9a125;
+}
+
+.contact-me-subtitle{
+    font-size: 30px;
+    padding-top: 10vh;
+}
+
+
+@media screen and (min-width: 380px) {
+    .icon-text{
+        font-size: 16px
+    }
+    .skill{
+        margin: 1vw;
+    }
+    .carrousel-arrow{
+        margin: 10px;
+        width: 15px;
+    }
+}
+@media screen and (min-width: 500px) {
+    .skill{
+        margin: 3vw;
+    }
+}
+@media screen and (min-width: 600px) {
+    .icon-text{
+        font-size: 20px
+    }
+    .skill{
+        margin: 3vw;
+    }
+    .center{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
